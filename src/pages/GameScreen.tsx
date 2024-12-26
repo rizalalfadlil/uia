@@ -16,6 +16,7 @@ export const GameScreen = ({
   KeyPressed,
 }: any) => {
   const [keyboarActive, setKeyboarActive] = useState(true);
+
   return (
     <div className="flex flex-col grow p-4">
       <div className="flex justify-end text-lg font-medium">
@@ -63,6 +64,7 @@ export const GameScreen = ({
       <input
         type="text"
         autoFocus
+        readOnly // Tambahkan readonly untuk mencegah keyboard virtual muncul
         onKeyDown={KeyPressed}
         className="absolute inset-0 bottom-4 w-full h-full opacity-0 z-10 cursor-default"
       />

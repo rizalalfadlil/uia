@@ -18,13 +18,13 @@ export const GameOverScreen = ({
     { name: "example data", score: 0, streak: 0 },
   ]);
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   const fetchLeaderboard = async () => {
     const data: any = await getLeaderboard();
     setRecords(data);
   };
   const submitScore = async () => {
-    setLoading(true)
+    setLoading(true);
     await submitScoreToFirestore(playerName, score, streak);
 
     restartGame();
@@ -129,7 +129,7 @@ export const GameOverScreen = ({
               onClick={submitScore}
               disabled={playerName === "" || loading}
             >
-              {loading ? <Ellipsis/> : "submit score and restart"}
+              {loading ? <Ellipsis /> : "submit score and restart"}
             </button>
           </div>
         </>
@@ -141,17 +141,17 @@ export const GameOverScreen = ({
           restart
         </button>
       )}
-      <div className="h-60 overflow-scroll hiddenscroll">
-        <div className="flex gap-2 justify-between bg-white/10 p-4 rounded-sm my-2">
-          <div>pos</div>
-          <div className="grow">name</div>
-          <div className="text-yellow-400">
-            score
-            <span className="bg-orange-300 text-orange-700 ms-2 p-2 rounded-sm">
-              streak
-            </span>
-          </div>
+      <div className="flex gap-2 justify-between bg-white/10 p-4 rounded-sm my-2">
+        <div>pos</div>
+        <div className="grow">name</div>
+        <div className="text-yellow-400">
+          score
+          <span className="bg-orange-300 text-orange-700 ms-2 p-2 rounded-sm">
+            streak
+          </span>
         </div>
+      </div>
+      <div className="h-60 overflow-scroll hiddenscroll">
         {records
           .sort(
             (a: { score: number }, b: { score: number }) => b.score - a.score
