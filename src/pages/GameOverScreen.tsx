@@ -102,7 +102,7 @@ export const GameOverScreen = ({
           <div className="grid grid-cols-4 gap-2">
             <input
               disabled={!isNameEdit}
-              className={`bg-slate-200/10 p-2 col-span-3 rounded-md ring-0 outline-none disabled:text-slate-700 ${
+              className={`bg-slate-200/10 p-2 col-span-3 rounded-md ring-0 outline-none disabled:text-slate-700 placeholder:text-slate-700 ${
                 isNameEdit && "border"
               }}`}
               placeholder="enter your name"
