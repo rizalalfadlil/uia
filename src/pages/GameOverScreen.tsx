@@ -89,7 +89,7 @@ export const GameOverScreen = ({
 
   return (
     <div
-      className="grid gap-4 text-center min-h-screen place-content-center
+      className="grid gap-4 text-center grow place-content-center
      p-4"
     >
       <b className="text-2xl md:text-4xl">Game Over</b>

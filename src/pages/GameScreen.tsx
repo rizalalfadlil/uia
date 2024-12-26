@@ -17,7 +17,7 @@ export const GameScreen = ({
 }: any) => {
   const [keyboarActive, setKeyboarActive] = useState(true);
   return (
-    <div className="flex flex-col min-h-screen p-4">
+    <div className="flex flex-col grow p-4">
       <div className="flex justify-end text-lg font-medium">
         <p>
           {score}{" "}
