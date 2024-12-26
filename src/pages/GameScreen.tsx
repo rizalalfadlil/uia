@@ -19,10 +19,10 @@ export const GameScreen = ({
   return (
     <div className="flex flex-col grow p-4">
       <div className="flex justify-end text-lg font-medium">
-        <p>
+        <p className="">
           {score}{" "}
           {streak != 0 && (
-            <span className="bg-green-600 text-white p-1 text-sm rounded-md px-4">
+            <span className="bg-green-600 text-white p-2 text-sm rounded-md px-4">
               {(1 + streak / 10).toFixed(1)}x
             </span>
           )}

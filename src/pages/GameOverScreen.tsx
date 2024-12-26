@@ -68,7 +68,7 @@ export const GameOverScreen = ({
     return (
       <>
         <span
-          className={`px-2 rounded-sm mx-2 ${getRankColor(
+          className={`p-2 rounded-sm mx-2 ${getRankColor(
             rank > 0 ? rank : sortedPlayers.length + 1
           )}`}
         >
@@ -79,7 +79,7 @@ export const GameOverScreen = ({
               )}`}
         </span>
         {rank === 1 && (
-          <span className={`px-2 rounded-sm  text-nowrap ${getRankColor(1)}`}>
+          <span className={`p-2 rounded-sm  text-nowrap ${getRankColor(1)}`}>
             best record
           </span>
         )}
@@ -142,12 +142,12 @@ export const GameOverScreen = ({
         </button>
       )}
       <div className="h-60 overflow-scroll hiddenscroll">
-        <div className="flex gap-2 bg-white/10 p-2 rounded-md my-2">
+        <div className="flex gap-2 justify-between bg-white/10 p-4 rounded-sm my-2">
           <div>pos</div>
           <div className="grow">name</div>
           <div className="text-yellow-400">
             score
-            <span className="bg-orange-300 text-orange-700 ms-2 px-2 rounded-sm">
+            <span className="bg-orange-300 text-orange-700 ms-2 p-2 rounded-sm">
               streak
             </span>
           </div>
@@ -170,7 +170,7 @@ export const GameOverScreen = ({
                 <div className="grow overflow-hidden">{r.name}</div>
                 <div className="text-yellow-400">
                   {r.score}
-                  <span className="bg-orange-300 text-orange-700 ms-2 px-2 rounded-sm">
+                  <span className="bg-orange-300 text-orange-700 ms-2 p-2 rounded-sm">
                     {r.streak}
                   </span>
                 </div>
