@@ -19,9 +19,15 @@ export const GameOverScreen = ({
   ]);
 
   const [loading, setLoading] = useState(false);
+  const [fetching, setFetching] = useState(true);
   const fetchLeaderboard = async () => {
-    const data: any = await getLeaderboard();
-    setRecords(data);
+    try {
+      const data: any = await getLeaderboard();
+      setRecords(data);
+      setFetching(false)
+    } catch (e) {
+      console.error(e)
+    }
   };
   const submitScore = async () => {
     setLoading(true);
@@ -87,7 +93,7 @@ export const GameOverScreen = ({
     );
   };
 
-  return (
+  return fetching ? (<div className="grid place-content-center grow">loading</div>) :  (
     <div
       className="grid gap-4 text-center grow place-content-center
      p-4"
