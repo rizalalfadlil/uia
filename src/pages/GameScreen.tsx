@@ -1,5 +1,5 @@
 import { Progress } from "antd";
-import React, { useState } from "react";
+import { useState } from "react";
 import { img } from "../utils/cat-api";
 import { Keyboard } from "lucide-react";
 
@@ -42,7 +42,7 @@ export const GameScreen = ({
       </div>
       <div className="flex gap-2">
         <button
-          className={`rounded p-2 duration-300 transition-all${
+          className={`rounded p-2 duration-300 transition-all z-20 ${
             keyboarActive && "bg-white/20"
           }`}
           onClick={() => setKeyboarActive(!keyboarActive)}

@@ -1,7 +1,5 @@
-import { Badge, Button, Input, Modal, Progress, Table } from "antd";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
-import { Check, Pencil } from "lucide-react";
 import { GameOverScreen } from "./pages/GameOverScreen";
 import { GameScreen } from "./pages/GameScreen";
 import { sfx } from "./utils/cat-api";
