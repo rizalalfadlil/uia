@@ -102,7 +102,7 @@ export default function App() {
   };
 
   return (
-    <main className="w-full min-h-screen flex flex-col font-coiny bg-gradient-to-t from-slate-900 to-slate-950 text-blue-200 lg:px-40 xl:px-60 2xl:px-80">
+    <main className="w-full min-h-dvh flex flex-col font-coiny bg-gradient-to-t from-slate-900 to-slate-950 text-blue-200 lg:px-40 xl:px-60 2xl:px-80">
       {showFinalScore ? (
         <GameOverScreen
           score={score}
