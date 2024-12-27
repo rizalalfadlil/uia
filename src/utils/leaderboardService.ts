@@ -43,7 +43,7 @@ export const submitScoreToFirestore = async (playerName:string, score:number, st
 };
 
 // Mendapatkan leaderboard
-export const getLeaderboard = async (limitCount = 10) => {
+export const getLeaderboard = async (limitCount = 1000) => {
   try {
     const leaderboardRef = collection(db, "leaderboard");
     const q = query(leaderboardRef, orderBy("score", "desc"), limit(limitCount));
